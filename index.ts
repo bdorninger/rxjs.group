@@ -13,6 +13,24 @@ import {
   mergeAll
 } from 'rxjs/operators';
 
+interface MyMap {
+  [key: string]: string;
+}
+
+interface Params {
+  view?: string;  
+}
+
+const p :Params = { foo:'bar'};
+
+const mymap = {
+  foo: 'abc',
+  bar: 'fd',
+  bak: 'qtr'
+}
+
+console.log(mymap[Object.getOwnPropertyNames(mymap)[0]])
+
 const bufsize = 4;
 
 const flushers: Subject<void>[] = [];
